@@ -13,6 +13,33 @@
             padding: 20px;
             color: #333;
         }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: #FF6B6B;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+        .lang-switch a.active {
+            background: #FF6B6B;
+            color: #fff;
+        }
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+        .lang-section {
+            display: block;
+        }
+        .lang-section.zh {
+            display: block;
+        }
+        .lang-section.en {
+            display: none;
+        }
         h1, h2 { color: #1a1a1a; }
         .effective-date {
             color: #666;
@@ -29,41 +56,123 @@
     </style>
 </head>
 <body>
-    <h1>隐私政策</h1>
-    <div class="effective-date">生效日期：2026年5月29日 | 最后更新：2026年5月29日</div>
 
-    <h2>概述</h2>
-    <p>SocialPost AI 尊重并保护所有用户的个人隐私。本隐私政策说明我们如何收集、使用、披露和保护您的信息。</p>
-
-    <h2>我们收集的信息</h2>
-    
-    <h3>用户输入内容</h3>
-    <p>当您使用文案生成功能时，您输入的提示词会被发送至我们的服务提供商（阿里云百炼）进行处理，以生成所需的文案内容。这些内容不会用于任何其他目的。</p>
-
-    <h3>使用数据</h3>
-    <p>我们可能收集匿名使用数据（如功能使用频率、生成次数），用于改进服务质量。</p>
-
-    <h2>信息共享</h2>
-    <p>我们不会出售、交易或转让您的个人信息给第三方。唯一例外是：</p>
-    <ul>
-        <li><strong>阿里云百炼</strong>：您输入的提示词会被发送至阿里云百炼的API接口，用于实时生成文案。阿里云遵守其自身的隐私政策，详情见 <a href="https://www.aliyun.com/legal/privacy" target="_blank">阿里云隐私政策</a>。</li>
-    </ul>
-
-    <h2>数据保留</h2>
-    <p>您输入的提示词和生成的文案在生成后不会被我们留存。所有数据处理实时完成。</p>
-
-    <h2>您的权利</h2>
-    <p>您可以通过以下邮箱联系我们，询问关于您信息的处理方式。</p>
-
-    <h2>本政策的变更</h2>
-    <p>我们可能会不时更新本隐私政策。任何变更会在此页面公布，并更新生效日期。</p>
-
-    <h2>联系我们</h2>
-    <p>如有任何问题，请通过以下方式联系我们：<br>
-    邮箱：seal023@163.com</p>
-
-    <div class="footer">
-        <p>© 2026 SocialPost AI. All rights reserved.</p>
+    <!-- ===== 语言切换 ===== -->
+    <div class="lang-switch">
+        <a href="#" class="active" onclick="switchLang('zh')">中文</a> |
+        <a href="#" onclick="switchLang('en')">English</a>
     </div>
+
+    <!-- ============================================================ -->
+    <!-- 中文版 -->
+    <!-- ============================================================ -->
+    <div id="zh" class="lang-section zh">
+        <h1>隐私政策</h1>
+        <div class="effective-date">生效日期：2026年5月29日 | 最后更新：2026年5月29日</div>
+
+        <h2>概述</h2>
+        <p>SocialPost AI 尊重并保护所有用户的个人隐私。本隐私政策说明我们如何收集、使用、披露和保护您的信息。</p>
+
+        <h2>我们收集的信息</h2>
+        
+        <h3>用户输入内容</h3>
+        <p>当您使用文案生成功能时，您输入的提示词会被发送至我们的服务提供商（阿里云百炼）进行处理，以生成所需的文案内容。这些内容不会用于任何其他目的。</p>
+
+        <h3>使用数据</h3>
+        <p>我们可能收集匿名使用数据（如功能使用频率、生成次数），用于改进服务质量。</p>
+
+        <h2>信息共享</h2>
+        <p>我们不会出售、交易或转让您的个人信息给第三方。唯一例外是：</p>
+        <ul>
+            <li><strong>阿里云百炼</strong>：您输入的提示词会被发送至阿里云百炼的API接口，用于实时生成文案。阿里云遵守其自身的隐私政策，详情见 <a href="https://www.aliyun.com/legal/privacy" target="_blank">阿里云隐私政策</a>。</li>
+        </ul>
+
+        <h2>数据保留</h2>
+        <p>您输入的提示词和生成的文案在生成后不会被我们留存。所有数据处理实时完成。</p>
+
+        <h2>您的权利</h2>
+        <p>您可以通过以下邮箱联系我们，询问关于您信息的处理方式。</p>
+
+        <h2>本政策的变更</h2>
+        <p>我们可能会不时更新本隐私政策。任何变更会在此页面公布，并更新生效日期。</p>
+
+        <h2>联系我们</h2>
+        <p>如有任何问题，请通过以下方式联系我们：<br>
+        邮箱：seal023@163.com</p>
+
+        <div class="footer">
+            <p>© 2026 SocialPost AI. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 英文版 -->
+    <!-- ============================================================ -->
+    <div id="en" class="lang-section en">
+        <h1>Privacy Policy</h1>
+        <div class="effective-date">Effective Date: May 29, 2026 | Last Updated: May 29, 2026</div>
+
+        <h2>Overview</h2>
+        <p>SocialPost AI respects and protects the privacy of all users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.</p>
+
+        <h2>Information We Collect</h2>
+        
+        <h3>User Input</h3>
+        <p>When you use the copy generation feature, the prompts you enter are sent to our service provider (Alibaba Cloud Bailian) for processing to generate the desired content. These inputs are not used for any other purpose.</p>
+
+        <h3>Usage Data</h3>
+        <p>We may collect anonymous usage data (e.g., feature usage frequency, generation count) to improve our service quality.</p>
+
+        <h2>Information Sharing</h2>
+        <p>We do not sell, trade, or transfer your personal information to third parties. The only exception is:</p>
+        <ul>
+            <li><strong>Alibaba Cloud Bailian</strong>: Your prompts are sent to Alibaba Cloud Bailian's API for real-time copy generation. Alibaba Cloud adheres to its own privacy policy, available at <a href="https://www.aliyun.com/legal/privacy" target="_blank">Alibaba Cloud Privacy Policy</a>.</li>
+        </ul>
+
+        <h2>Data Retention</h2>
+        <p>Your prompts and generated copy are not retained after generation. All data processing occurs in real-time.</p>
+
+        <h2>Your Rights</h2>
+        <p>You may contact us via the email below to inquire about how your information is processed.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions, please contact us at:<br>
+        Email: seal023@163.com</p>
+
+        <div class="footer">
+            <p>© 2026 SocialPost AI. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- ===== 语言切换脚本 ===== -->
+    <script>
+        function switchLang(lang) {
+            // 隐藏所有语言区块
+            document.getElementById('zh').style.display = 'none';
+            document.getElementById('en').style.display = 'none';
+            // 显示选中的语言
+            document.getElementById(lang).style.display = 'block';
+            // 更新切换按钮样式
+            const links = document.querySelectorAll('.lang-switch a');
+            links.forEach(function(el) {
+                el.classList.remove('active');
+            });
+            // 高亮当前选中的语言链接
+            const activeLink = document.querySelector('.lang-switch a[onclick*="' + lang + '"]');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+            // 修改页面 lang 属性
+            document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : 'en';
+        }
+        // 默认显示中文
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLang('zh');
+        });
+    </script>
+
 </body>
 </html>
